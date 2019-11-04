@@ -155,16 +155,19 @@
                 var a = sura + '/' + sura + "-" + b;
                 var link = 'http://www.quran.gov.bd/quran/Sound/bangla/' + a + '.mp3';
                 show +=
-                    '<div class="btn btn-default btn-block"><a href="http://www.quran.gov.bd/quran/Sound/bangla/' +
+                    '<div class="btn btn-default btn-block"><a onclick="play()" href="http://www.quran.gov.bd/quran/Sound/bangla/' +
                     a +
                     '.mp3">' +
                     suraName +
                     ' ayat ' +
                     b +
-                    '</a> <button class="btn btn-success btn-sm m-auto p-2" onclick="play();">Play</button></div>';
+                    '</a></div>';
             }
             document.getElementById('dlink').innerHTML = show;
             show = '';
+        }
+        function play(link){
+            console.log(link);
         }
     </script>
 
